@@ -11,7 +11,7 @@ class Bot:
     rcon_service: RconService = None
 
     def __init__(self):
-        data = load_yaml('config\\base.yaml')
+        data = load_yaml('config/base.yaml')
         
         self.event_service = EventService(data["log_file"])
         self.plugin_service = PluginService(self)

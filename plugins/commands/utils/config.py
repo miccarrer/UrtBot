@@ -1,6 +1,6 @@
 from utils.yaml import load_yaml
 
-commands_help = load_yaml('config\\commands.yaml')
+commands_help = load_yaml('config/commands.yaml')
 
 
 def get_cmd_list():
