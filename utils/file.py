@@ -8,8 +8,7 @@ def get_line_count(filepath):
     return i + 1
 
 
-def observe(filepath, on_new_line):
-    ignore_line_count = get_line_count(filepath)
+def observe(filepath, on_new_line, starting_line_number=0):
     with open(filepath, 'r') as f:
         current_line = 0
         while True:
@@ -21,5 +20,6 @@ def observe(filepath, on_new_line):
                     time.sleep(0.1)
                     continue
                 line += tail
-            if(current_line > ignore_line_count):
-                on_new_line(line)
+            if(current_line > starting_line_number):
+                on_new_line(line.strip())
+                time.sleep(1)

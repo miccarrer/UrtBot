@@ -1,0 +1,36 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile Server Logs ANTLR Lexer & Parser",
+      "type": "shell",
+      "command": "java",
+      "args": [
+        "-jar",
+        "C:\\Program Files\\ANTLR\\4.9.2\\antlr.jar",
+        "-Dlanguage=Python3",
+        "events\\parser\\Events.g4"
+      ]
+    },
+    {
+      "label": "Compile Commands ANTLR Lexer & Parser",
+      "type": "shell",
+      "command": "java",
+      "args": [
+        "-jar",
+        "C:\\Program Files\\ANTLR\\4.9.2\\antlr.jar",
+        "-Dlanguage=Python3",
+        "plugins\\commands\\parser\\Commands.g4"
+      ]
+    },
+    {
+        "label": "Compile all ANTLR Lexer & Parser",
+        "dependsOn": [
+            "Compile Server Logs ANTLR Lexer & Parser",
+            "Compile Commands ANTLR Lexer & Parser"
+        ]
+    }
+  ]
+}

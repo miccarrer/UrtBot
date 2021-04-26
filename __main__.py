@@ -1,21 +1,9 @@
-from events import GameEvent
 import sys, os, logging
-from events_file import observe
-from events_reader import read_one
-from events_dispatcher import dispatch
-from properties import log_file
+from bot import Bot
 
 def main():
-  logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
-  logging.info('Starting bot..')
-
-  events=[]
-
-  def on_event(event: GameEvent):
-    dispatch(event)
-    events.append(event)
-
-  observe(log_file, lambda newline: on_event(read_one(newline)))
+  logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+  Bot().start()
 
 if __name__ == '__main__':
     try:

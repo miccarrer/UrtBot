@@ -1,0 +1,20 @@
+help_all:
+  command: help
+  shortcut: h
+  description: Get server commands list
+  usage: help
+help_cmd:
+  command: help
+  shortcut: h
+  description: Get server command help
+  usage: help <command>
+kill_me:
+  command: kill
+  shortcut: k
+  description: Kill yourself
+  usage: kill
+kill_player:
+  command: kill
+  shortcut: k
+  description: Kill a player
+  usage: kill <player>

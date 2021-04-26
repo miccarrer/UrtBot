@@ -1,10 +1,10 @@
-# Generated from events_parser\Events.g4 by ANTLR 4.9.2
+# Generated from events\parser\Events.g4 by ANTLR 4.9.2
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .EventsParser import EventsParser
 else:
     from EventsParser import EventsParser
-from events import *
+from events.models import *
 
 # This class defines a complete listener for a parse tree produced by EventsParser.
 class EventsListener(ParseTreeListener):
@@ -24,6 +24,15 @@ class EventsListener(ParseTreeListener):
 
     # Exit a parse tree produced by EventsParser#event.
     def exitEvent(self, ctx:EventsParser.EventContext):
+        pass
+
+
+    # Enter a parse tree produced by EventsParser#eventTime.
+    def enterEventTime(self, ctx:EventsParser.EventTimeContext):
+        pass
+
+    # Exit a parse tree produced by EventsParser#eventTime.
+    def exitEventTime(self, ctx:EventsParser.EventTimeContext):
         pass
 
 
@@ -189,6 +198,15 @@ class EventsListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by EventsParser#radioEvent.
+    def enterRadioEvent(self, ctx:EventsParser.RadioEventContext):
+        pass
+
+    # Exit a parse tree produced by EventsParser#radioEvent.
+    def exitRadioEvent(self, ctx:EventsParser.RadioEventContext):
+        pass
+
+
     # Enter a parse tree produced by EventsParser#killEvent.
     def enterKillEvent(self, ctx:EventsParser.KillEventContext):
         pass
@@ -225,6 +243,15 @@ class EventsListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by EventsParser#flagReturnEvent.
+    def enterFlagReturnEvent(self, ctx:EventsParser.FlagReturnEventContext):
+        pass
+
+    # Exit a parse tree produced by EventsParser#flagReturnEvent.
+    def exitFlagReturnEvent(self, ctx:EventsParser.FlagReturnEventContext):
+        pass
+
+
     # Enter a parse tree produced by EventsParser#intValue.
     def enterIntValue(self, ctx:EventsParser.IntValueContext):
         pass
@@ -234,21 +261,48 @@ class EventsListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by EventsParser#wordValue.
-    def enterWordValue(self, ctx:EventsParser.WordValueContext):
+    # Enter a parse tree produced by EventsParser#manyButNewLine.
+    def enterManyButNewLine(self, ctx:EventsParser.ManyButNewLineContext):
         pass
 
-    # Exit a parse tree produced by EventsParser#wordValue.
-    def exitWordValue(self, ctx:EventsParser.WordValueContext):
+    # Exit a parse tree produced by EventsParser#manyButNewLine.
+    def exitManyButNewLine(self, ctx:EventsParser.ManyButNewLineContext):
         pass
 
 
-    # Enter a parse tree produced by EventsParser#sentenceValue.
-    def enterSentenceValue(self, ctx:EventsParser.SentenceValueContext):
+    # Enter a parse tree produced by EventsParser#manyButWhitespace.
+    def enterManyButWhitespace(self, ctx:EventsParser.ManyButWhitespaceContext):
         pass
 
-    # Exit a parse tree produced by EventsParser#sentenceValue.
-    def exitSentenceValue(self, ctx:EventsParser.SentenceValueContext):
+    # Exit a parse tree produced by EventsParser#manyButWhitespace.
+    def exitManyButWhitespace(self, ctx:EventsParser.ManyButWhitespaceContext):
+        pass
+
+
+    # Enter a parse tree produced by EventsParser#manyButBackSlash.
+    def enterManyButBackSlash(self, ctx:EventsParser.ManyButBackSlashContext):
+        pass
+
+    # Exit a parse tree produced by EventsParser#manyButBackSlash.
+    def exitManyButBackSlash(self, ctx:EventsParser.ManyButBackSlashContext):
+        pass
+
+
+    # Enter a parse tree produced by EventsParser#manyButBackSlashOrNewLine.
+    def enterManyButBackSlashOrNewLine(self, ctx:EventsParser.ManyButBackSlashOrNewLineContext):
+        pass
+
+    # Exit a parse tree produced by EventsParser#manyButBackSlashOrNewLine.
+    def exitManyButBackSlashOrNewLine(self, ctx:EventsParser.ManyButBackSlashOrNewLineContext):
+        pass
+
+
+    # Enter a parse tree produced by EventsParser#manyButDoubleQuote.
+    def enterManyButDoubleQuote(self, ctx:EventsParser.ManyButDoubleQuoteContext):
+        pass
+
+    # Exit a parse tree produced by EventsParser#manyButDoubleQuote.
+    def exitManyButDoubleQuote(self, ctx:EventsParser.ManyButDoubleQuoteContext):
         pass
 
 
