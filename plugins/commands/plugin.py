@@ -20,14 +20,14 @@ class CommandsPlugin(Plugin):
 
                     def on_syntax_error(recognizer, offendingSymbol, line, column, msg, e):
                         if(column == 0):
-                          self.bot.rcon_service.tell_error(chat_event.slot, f'Unknown command \'{command_name}\'. Use \'!help\' to get the list')
+                          self.rcon.tell(chat_event.slot, f'Unknown command \'{command_name}\'. Use \'!help\' to get the list')
                         else:
-                          self.bot.rcon_service.tell_error(chat_event.slot, f'Bad usage. Use \'!help {command_name}\' ')
+                          self.rcon.tell(chat_event.slot, f'Bad usage. Use \'!help {command_name}\' ')
 
                     command: ChatCommand = parse_command(command_without_prefix, on_syntax_error)
 
                     if(command):
                         command.prefix = prefix
-                        command.execute(chat_event, self.bot)
+                        command.execute(chat_event, self.rcon)
 
                     break

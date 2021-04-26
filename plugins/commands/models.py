@@ -1,6 +1,7 @@
 
 from enum import Enum, unique
-from plugins.commands.utils.config import get_cmd_list
+from rcon.helper import RconHelper
+from plugins.commands.utils.config import get_cmd, get_cmd_list
 from utils.colors import Colors
 from events.models import ChatEvent
 from typing import Any
@@ -13,7 +14,7 @@ class ChatCommandPrefix(Enum):
 class ChatCommand:
     prefix = ChatCommandPrefix
 
-    def execute(self, event: ChatEvent, bot):
+    def execute(self, event: ChatEvent, rcon: RconHelper):
         pass
 
 ################### commands
@@ -22,35 +23,33 @@ class ChatCommand:
 
 class HelpAllCommand(ChatCommand):
 
-    def execute(self, event: ChatEvent, bot):
-      bot.rcon_service.tell_info(event.slot, 'Available commands are: ' + Colors.LIGHT_YELLOW.value + get_cmd_list())
+    def execute(self, event: ChatEvent, rcon: RconHelper):
+      rcon.tell(event.slot, 'Available commands are: ' + Colors.LIGHT_YELLOW.value + get_cmd_list())
 
 
 class HelpOneCommand(ChatCommand):
     cmd: str = ""
 
-    def execute(self, event: ChatEvent, bot):
-        bot.rcon_service.tell_error(event.slot, 'Help all command not available yet')
+    def execute(self, event: ChatEvent, rcon: RconHelper):
+        rcon.tell(event.slot, get_cmd(self.cmd))
 
 # rcon
 
 class RconCommand(ChatCommand):
     request: str
 
-    def execute(self, event: ChatEvent, bot):
-        response_lines = bot.rcon_service.rcon(self.request)
-        for line in response_lines:
-            bot.rcon_service.tell_info(event.slot, line)
+    def execute(self, event: ChatEvent, rcon: RconHelper):
+        rcon.send(self.request)
 
 # kill
 
 class KillMeCommand(ChatCommand):
-    def execute(self, event: ChatEvent, bot):
-        bot.rcon_service.smite(event.slot)
+    def execute(self, event: ChatEvent, rcon: RconHelper):
+        rcon.smite(event.slot)
 
 
 class KillPlayerCommand(ChatCommand):
     target: Any = None
 
-    def execute(self, event: ChatEvent, bot):
-        bot.rcon_service.smite(self.target)
+    def execute(self, event: ChatEvent, rcon: RconHelper):
+        rcon.smite(self.target)

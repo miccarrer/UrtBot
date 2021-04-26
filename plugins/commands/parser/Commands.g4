@@ -22,9 +22,9 @@ helpAllCommand returns[value]:
   {$value = HelpAllCommand()};
 
 helpOneCommand returns[value]:
-  HELP WHITESPACE cmd=manyButNewLine {$value = HelpAllCommand()}
+  HELP WHITESPACE cmd=manyButNewLine
   {$value = HelpOneCommand()}
-  {$value.target = $cmd.text}
+  {$value.cmd = $cmd.text}
   ;
 
 // rcon

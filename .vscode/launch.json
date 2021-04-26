@@ -5,12 +5,19 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Python: Module",
+      "name": "Build & Launch",
       "type": "python",
       "request": "launch",
       "program": "__main__.py",
       "console": "integratedTerminal",
       "preLaunchTask": "Compile all ANTLR Lexer & Parser"
+    },
+    {
+      "name": "Launch",
+      "type": "python",
+      "request": "launch",
+      "program": "__main__.py",
+      "console": "integratedTerminal"
     }
   ]
 }
