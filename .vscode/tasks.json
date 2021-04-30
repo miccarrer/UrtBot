@@ -9,9 +9,9 @@
       "command": "java",
       "args": [
         "-jar",
-        "C:\\Program Files\\ANTLR\\4.9.2\\antlr.jar",
+        "/usr/local/lib/antlr-4.9.2-complete.jar",
         "-Dlanguage=Python3",
-        "events\\parser\\Events.g4"
+        "events/parser/Events.g4"
       ]
     },
     {
@@ -20,9 +20,9 @@
       "command": "java",
       "args": [
         "-jar",
-        "C:\\Program Files\\ANTLR\\4.9.2\\antlr.jar",
+        "/usr/local/lib/antlr-4.9.2-complete.jar",
         "-Dlanguage=Python3",
-        "plugins\\commands\\parser\\Commands.g4"
+        "plugins/commands/parser/Commands.g4"
       ]
     },
     {
