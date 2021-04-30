@@ -1,5 +1,4 @@
 import logging
-from rcon.helper import RconHelper
 import socket
 from typing import Any, List
 from utils.colors import Colors
@@ -14,12 +13,6 @@ class RconService:
 
   sock: socket.socket
 
-  helper: RconHelper
-
-  color_info = Colors.LIGHT_BLUE.value
-  color_success = Colors.GREEN.value
-  color_error = Colors.RED.value
-
   def __init__(self, ip: str, port: int, password: str):
       self.ip = ip
       self.port = port
@@ -28,8 +21,6 @@ class RconService:
       self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
       self.sock.settimeout(5)
       self.sock.connect((ip, port))
-
-      self.helper = RconHelper(self)
 
   
   def __del__(self):
@@ -51,3 +42,14 @@ class RconService:
     except Exception as err:
       logging.error(err)
       return ('error', str(err))
+
+  def say(self, message: str):
+    for line in message.splitlines():
+      self.send(f'say \"{line}\"')
+
+  def tell(self, slot, message: str):
+    for line in message.splitlines():
+      self.send(f'tell {slot} \"{line}\"')
+
+  def smite(self, slot):
+    self.send(f'smite {slot}')

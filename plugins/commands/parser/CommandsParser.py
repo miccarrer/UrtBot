@@ -1,4 +1,4 @@
-# Generated from plugins\commands\parser\Commands.g4 by ANTLR 4.9.2
+# Generated from plugins/commands/parser/Commands.g4 by ANTLR 4.9.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -13,33 +13,33 @@ from plugins.commands.models import *
 def serializedATN():
     with StringIO() as buf:
         buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\n")
-        buf.write("[\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b")
+        buf.write("Z\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b")
         buf.write("\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\3\2\3\2\3\2\3\2")
         buf.write("\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\5\2(\n\2")
-        buf.write("\3\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\5\3\5\3\5\3")
-        buf.write("\5\3\5\3\5\3\6\3\6\3\6\3\7\3\7\3\7\3\7\3\7\3\7\3\b\3\b")
-        buf.write("\5\bE\n\b\3\t\6\tH\n\t\r\t\16\tI\3\n\6\nM\n\n\r\n\16\n")
-        buf.write("N\3\13\6\13R\n\13\r\13\16\13S\3\f\6\fW\n\f\r\f\16\fX\3")
-        buf.write("\f\2\2\r\2\4\6\b\n\f\16\20\22\24\26\2\5\3\2\b\b\3\2\7")
-        buf.write("\7\3\2\t\t\2X\2\'\3\2\2\2\4)\3\2\2\2\6,\3\2\2\2\b\63\3")
-        buf.write("\2\2\2\n9\3\2\2\2\f<\3\2\2\2\16D\3\2\2\2\20G\3\2\2\2\22")
-        buf.write("L\3\2\2\2\24Q\3\2\2\2\26V\3\2\2\2\30\31\5\b\5\2\31\32")
+        buf.write("\3\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3\4\3\5\3\5\3\5\3\5\3")
+        buf.write("\5\3\5\3\6\3\6\3\6\3\7\3\7\3\7\3\7\3\7\3\7\3\b\3\b\5\b")
+        buf.write("D\n\b\3\t\6\tG\n\t\r\t\16\tH\3\n\6\nL\n\n\r\n\16\nM\3")
+        buf.write("\13\6\13Q\n\13\r\13\16\13R\3\f\6\fV\n\f\r\f\16\fW\3\f")
+        buf.write("\2\2\r\2\4\6\b\n\f\16\20\22\24\26\2\5\3\2\b\b\3\2\7\7")
+        buf.write("\3\2\t\t\2W\2\'\3\2\2\2\4)\3\2\2\2\6,\3\2\2\2\b\62\3\2")
+        buf.write("\2\2\n8\3\2\2\2\f;\3\2\2\2\16C\3\2\2\2\20F\3\2\2\2\22")
+        buf.write("K\3\2\2\2\24P\3\2\2\2\26U\3\2\2\2\30\31\5\b\5\2\31\32")
         buf.write("\b\2\1\2\32(\3\2\2\2\33\34\5\4\3\2\34\35\b\2\1\2\35(\3")
         buf.write("\2\2\2\36\37\5\6\4\2\37 \b\2\1\2 (\3\2\2\2!\"\5\n\6\2")
         buf.write("\"#\b\2\1\2#(\3\2\2\2$%\5\f\7\2%&\b\2\1\2&(\3\2\2\2\'")
         buf.write("\30\3\2\2\2\'\33\3\2\2\2\'\36\3\2\2\2\'!\3\2\2\2\'$\3")
         buf.write("\2\2\2(\3\3\2\2\2)*\7\4\2\2*+\b\3\1\2+\5\3\2\2\2,-\7\4")
         buf.write("\2\2-.\7\b\2\2./\5\26\f\2/\60\b\4\1\2\60\61\b\4\1\2\61")
-        buf.write("\62\b\4\1\2\62\7\3\2\2\2\63\64\7\3\2\2\64\65\7\b\2\2\65")
-        buf.write("\66\5\26\f\2\66\67\b\5\1\2\678\b\5\1\28\t\3\2\2\29:\7")
-        buf.write("\5\2\2:;\b\6\1\2;\13\3\2\2\2<=\7\5\2\2=>\7\b\2\2>?\5\16")
-        buf.write("\b\2?@\b\7\1\2@A\b\7\1\2A\r\3\2\2\2BE\5\20\t\2CE\5\22")
-        buf.write("\n\2DB\3\2\2\2DC\3\2\2\2E\17\3\2\2\2FH\7\6\2\2GF\3\2\2")
-        buf.write("\2HI\3\2\2\2IG\3\2\2\2IJ\3\2\2\2J\21\3\2\2\2KM\n\2\2\2")
-        buf.write("LK\3\2\2\2MN\3\2\2\2NL\3\2\2\2NO\3\2\2\2O\23\3\2\2\2P")
-        buf.write("R\n\3\2\2QP\3\2\2\2RS\3\2\2\2SQ\3\2\2\2ST\3\2\2\2T\25")
-        buf.write("\3\2\2\2UW\n\4\2\2VU\3\2\2\2WX\3\2\2\2XV\3\2\2\2XY\3\2")
-        buf.write("\2\2Y\27\3\2\2\2\b\'DINSX")
+        buf.write("\7\3\2\2\2\62\63\7\3\2\2\63\64\7\b\2\2\64\65\5\26\f\2")
+        buf.write("\65\66\b\5\1\2\66\67\b\5\1\2\67\t\3\2\2\289\7\5\2\29:")
+        buf.write("\b\6\1\2:\13\3\2\2\2;<\7\5\2\2<=\7\b\2\2=>\5\16\b\2>?")
+        buf.write("\b\7\1\2?@\b\7\1\2@\r\3\2\2\2AD\5\20\t\2BD\5\22\n\2CA")
+        buf.write("\3\2\2\2CB\3\2\2\2D\17\3\2\2\2EG\7\6\2\2FE\3\2\2\2GH\3")
+        buf.write("\2\2\2HF\3\2\2\2HI\3\2\2\2I\21\3\2\2\2JL\n\2\2\2KJ\3\2")
+        buf.write("\2\2LM\3\2\2\2MK\3\2\2\2MN\3\2\2\2N\23\3\2\2\2OQ\n\3\2")
+        buf.write("\2PO\3\2\2\2QR\3\2\2\2RP\3\2\2\2RS\3\2\2\2S\25\3\2\2\2")
+        buf.write("TV\n\4\2\2UT\3\2\2\2VW\3\2\2\2WU\3\2\2\2WX\3\2\2\2X\27")
+        buf.write("\3\2\2\2\b\'CHMRW")
         return buf.getvalue()
 
 
@@ -279,9 +279,8 @@ class CommandsParser ( Parser ):
             self.match(CommandsParser.WHITESPACE)
             self.state = 44
             localctx.cmd = self.manyButNewLine()
-            localctx.value = HelpAllCommand()
             localctx.value = HelpOneCommand()
-            localctx.value.target = (None if localctx.cmd is None else self._input.getText(localctx.cmd.start,localctx.cmd.stop))
+            localctx.value.cmd = (None if localctx.cmd is None else self._input.getText(localctx.cmd.start,localctx.cmd.stop))
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -330,11 +329,11 @@ class CommandsParser ( Parser ):
         self.enterRule(localctx, 6, self.RULE_rconCommand)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 49
+            self.state = 48
             self.match(CommandsParser.RCON)
-            self.state = 50
+            self.state = 49
             self.match(CommandsParser.WHITESPACE)
-            self.state = 51
+            self.state = 50
             localctx.request = self.manyButNewLine()
             localctx.value = RconCommand()
             localctx.value.request = (None if localctx.request is None else self._input.getText(localctx.request.start,localctx.request.stop))
@@ -378,7 +377,7 @@ class CommandsParser ( Parser ):
         self.enterRule(localctx, 8, self.RULE_killMeCommand)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 55
+            self.state = 54
             self.match(CommandsParser.KILL)
             localctx.value = KillMeCommand()
         except RecognitionException as re:
@@ -429,11 +428,11 @@ class CommandsParser ( Parser ):
         self.enterRule(localctx, 10, self.RULE_killPlayerCommand)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 58
+            self.state = 57
             self.match(CommandsParser.KILL)
-            self.state = 59
+            self.state = 58
             self.match(CommandsParser.WHITESPACE)
-            self.state = 60
+            self.state = 59
             localctx.client = self.clientValue()
             localctx.value = KillPlayerCommand()
             localctx.value.target = (None if localctx.client is None else self._input.getText(localctx.client.start,localctx.client.stop))
@@ -480,18 +479,18 @@ class CommandsParser ( Parser ):
         localctx = CommandsParser.ClientValueContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_clientValue)
         try:
-            self.state = 66
+            self.state = 65
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,1,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 64
+                self.state = 63
                 self.intValue()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 65
+                self.state = 64
                 self.manyButWhitespace()
                 pass
 
@@ -539,13 +538,13 @@ class CommandsParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 69 
+            self.state = 68 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 68
+                self.state = 67
                 self.match(CommandsParser.DIGIT)
-                self.state = 71 
+                self.state = 70 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not (_la==CommandsParser.DIGIT):
@@ -594,18 +593,18 @@ class CommandsParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 74 
+            self.state = 73 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 73
+                self.state = 72
                 _la = self._input.LA(1)
                 if _la <= 0 or _la==CommandsParser.WHITESPACE:
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 76 
+                self.state = 75 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CommandsParser.RCON) | (1 << CommandsParser.HELP) | (1 << CommandsParser.KILL) | (1 << CommandsParser.DIGIT) | (1 << CommandsParser.DOUBLE_QUOTE) | (1 << CommandsParser.NEWLINE) | (1 << CommandsParser.ANY_CHAR))) != 0)):
@@ -654,18 +653,18 @@ class CommandsParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 79 
+            self.state = 78 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 78
+                self.state = 77
                 _la = self._input.LA(1)
                 if _la <= 0 or _la==CommandsParser.DOUBLE_QUOTE:
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 81 
+                self.state = 80 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CommandsParser.RCON) | (1 << CommandsParser.HELP) | (1 << CommandsParser.KILL) | (1 << CommandsParser.DIGIT) | (1 << CommandsParser.WHITESPACE) | (1 << CommandsParser.NEWLINE) | (1 << CommandsParser.ANY_CHAR))) != 0)):
@@ -714,18 +713,18 @@ class CommandsParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 84 
+            self.state = 83 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 83
+                self.state = 82
                 _la = self._input.LA(1)
                 if _la <= 0 or _la==CommandsParser.NEWLINE:
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 86 
+                self.state = 85 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CommandsParser.RCON) | (1 << CommandsParser.HELP) | (1 << CommandsParser.KILL) | (1 << CommandsParser.DIGIT) | (1 << CommandsParser.DOUBLE_QUOTE) | (1 << CommandsParser.WHITESPACE) | (1 << CommandsParser.ANY_CHAR))) != 0)):

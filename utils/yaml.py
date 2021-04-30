@@ -5,5 +5,5 @@ try:
 except ImportError:
     from yaml import Loader
 
-def load_yaml(filepath):
+def load_yaml(filepath) -> dict:
   return load(open(filepath, 'r'), Loader=Loader)

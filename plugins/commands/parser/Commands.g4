@@ -50,13 +50,8 @@ killPlayerCommand returns[value]:
 // parameters
 
 clientValue: intValue| manyButWhitespace;
-
 intValue: DIGIT+;
-
-// misc
-
 manyButWhitespace: ~(WHITESPACE)+;
-manyButDoubleQuote: ~(DOUBLE_QUOTE)+;
 manyButNewLine: ~(NEWLINE)+;
 
 //////////////////////////////////////////////////
@@ -68,7 +63,6 @@ KILL: 'kill' | 'k';
 
 DIGIT: '0' ..'9';
 
-DOUBLE_QUOTE: '"';
 WHITESPACE: ' ' | '\t';
 NEWLINE: '\r'? '\n' | '\r';
 

@@ -1,4 +1,4 @@
-log_file: /home/urt/urbanterror43/q3ut4/games.log
-ip: copain.servequake.com
+log_file: /opt/UrbanTerrorServer/q3ut4/games.log
+ip: 127.0.0.1
 port: 27960
-password: urtpass
+password: test
